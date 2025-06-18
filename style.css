@@ -1,0 +1,333 @@
+/* Réglages de base et typographie */
+/*
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+*/
+
+body {
+    /* 1. On place l'image en fond */
+    background-image: url('images/Fond.jpg');
+
+    /* 2. On s'assure qu'elle couvre tout l'écran et reste fixe */
+    background-size: cover;          /* Couvre tout l'espace sans déformer l'image */
+    background-position: center;     /* Centre l'image dans la page */
+    background-attachment: fixed;    /* L'image reste fixe lors du défilement (effet de parallaxe) */
+
+    /* 3. On définit une couleur de secours si l'image ne charge pas */
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #2c3e50;
+}
+
+/* En-tête */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: #3498db 4px solid;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+/* Barre de navigation */
+nav {
+    background: #333;
+    padding: 0.5rem 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #3498db;
+    border-radius: 5px;
+}
+
+/* Sections principales */
+
+main {
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.96); /* Fond blanc avec 96% d'opacité */
+    /*background: transparent; /* On enlève le fond blanc pour voir l'arrière-plan du body */
+    /*background: #fff;*/
+}
+
+section {
+    padding: 20px 0;
+}
+
+section h2 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+hr {
+    display: none;
+}
+
+/* Pied de page */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 20px;
+}
+
+/* Icônes FontAwesome (optionnel) */
+i.fas {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+/*
+ * ==========================================
+ * LIEN RETOUR DEBUT DE PAGE
+ * ==========================================
+ */
+ 
+/* Triangle pointant vers le HAUT */
+.triangle-haut {
+  display: inline-block;
+  width: 0; 
+  height: 0;
+  vertical-align: middle;
+  margin-left: 10px; /* Espace entre le titre et le triangle */
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 12px solid #3498db; /* Bleu */
+}
+
+/* Assure que le lien du triangle n'a pas de décoration superflue */
+a.lien-retour-haut {
+  text-decoration: none;
+}
+
+a.lien-retour-haut:hover .triangle-haut {
+  border-bottom-color: #2c3e50; /* Devient rouge au survol */
+}
+
+/*
+ * ==========================================
+ * STYLE ICONES RESEAUX SOCIAUX
+ * ==========================================
+ */
+.social-icon {
+  height: 36px;  /* Définit une hauteur standard pour l'icône. 24px est une bonne taille. */
+  width: auto;   /* Laisse la largeur s'ajuster pour ne pas déformer l'image. */
+  vertical-align: middle; /* Aligne joliment l'icône avec le milieu de la ligne de texte. */
+  margin: 0 3px; /* Ajoute un petit espace horizontal autour de l'icône. */
+}
+
+.espace-icones {
+  margin-left: 50px; /* Ajoute un espace de 30 pixels à GAUCHE de cet élément */
+}
+
+/*
+ * ==========================================
+ * PHOTO DE PROFIL
+ * ==========================================
+ */
+ 
+.profile-pic {
+    float: left;
+    margin: 0 20px 10px 0;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+
+    /* --- AJOUTS POUR CONTRÔLER LA TAILLE --- */
+    width: 100px;  /* Définit la largeur de l'image */
+    height: 100px; /* Définit la hauteur (identique à la largeur pour un cercle parfait) */
+    object-fit: cover; /* Assure que l'image remplit le cercle sans être déformée */
+}
+
+/*
+ * ==========================================
+ * LISERAIS POUR LES PUBLICATIONS
+ * ==========================================
+ */
+ 
+/* 1. Style de base commun à TOUTES les publications */
+.publication {
+    margin-bottom: 10px;
+    padding: 1px 5px; /*1er chiffre: espacement haut/bas; 2eme: droite/gauche */
+    background-color: #f9f9f9;
+    border-left: 4px solid #ccc;
+}
+
+/* 2. Liseré bleu pour les publications de la classe "economics" */
+.publication.economics {
+    border-left-color: #3498db; 
+}
+
+/* 3. Liseré vert pour les publications de la classe "machine-learning" */
+.publication.machine-learning {
+    border-left-color: #2ecc71; 
+}
+
+.publication a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.publication a:hover {
+    text-decoration: underline;
+}
+
+/*
+ * ==========================================
+ * TRIANGLE POUR TYPE DE DOMAINE DE RECHERCHE
+ * ==========================================
+ */
+
+/* Triangle pour publications en économie (voir liserai plus haut) */
+.triangle-eco {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid #3498db;
+}
+
+/* Triangle pour publications en Machine Learning */
+.triangle-ML {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid #2ecc71; 
+}
+
+/*
+ * ==========================================
+ * LIEN HYPERTEXTE
+ * ==========================================
+ */
+
+/* Style de base des liens du menu */
+nav a {
+    color: #fff; /* Texte blanc */
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+/* Au survol, on change uniquement le fond */
+nav a:hover {
+    background-color: #3498db;
+    border-radius: 5px;
+    color: #fff; /* On s'assure que le texte reste blanc */
+}
+
+/* Style de base pour les liens dans le contenu */
+main a {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+/* Lien normal (non visité) dans le contenu */
+main a:link {
+  font-weight: normal;
+  color: #2874A6;
+}
+
+/* Lien déjà visité dans le contenu */
+main a:visited {
+  font-weight: normal;
+  color: #2874A6; 
+}
+
+/* Lien survolé dans le contenu */
+main a:hover {
+  font-weight: normal;
+  color: #2874A6;
+  text-decoration: underline;
+}
+
+/* Lien au moment du clic dans le contenu */
+main a:active {
+  font-weight: normal;
+  color: #2874A6; 
+}
+
+/*
+ * ==========================================
+ * CLASSE POUR METTRE EN ÉVIDENCE UNE REVUE
+ * ==========================================
+ */
+
+.revue {
+    color: #6E5093;
+    font-style: italic; 
+}
+
+/*
+ * ==========================================
+ * CLASSES D'ESPACEMENT VERTICAL
+ * ==========================================
+ */
+
+.espace-petit {
+  margin-top: 10px; /* Ajoute un petit espace de 10 pixels en dessous de l'élément */
+}
+
+.espace-moyen {
+  margin-top: 25px; /* Ajoute un espace moyen de 25 pixels */
+}
+
+.espace-grand {
+  margin-top: 50px; /* Ajoute un grand espace de 50 pixels */
+}
