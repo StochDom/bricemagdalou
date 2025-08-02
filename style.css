@@ -12,7 +12,7 @@ body {
 
 body {
     /* 1. On place l'image en fond */
-    background-image: url('images/Fond1.jpg');
+    background-image: url('images/Fond1.png');
 
     /* 2. On s'assure qu'elle couvre tout l'écran et reste fixe */
     background-size: cover;          /* Couvre tout l'espace sans déformer l'image */
